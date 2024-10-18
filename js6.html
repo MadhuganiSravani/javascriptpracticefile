@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body> 
+    <h1 id="firstName">Hello</h1>
+    <div id="lastName">FLM</div>
+    <p id="fullName"> Vegita</p>
+
+    
+    <hr />
+
+    <button onclick="setfirstname()">firstName</button>
+    <button onclick="setlastname()">lastName</button>
+    <button onclick="setfullname()">fullName</button>
+    <button onclick="clearDefault()">Result Default</button>
+    
+</body>
+
+<script>
+    function setfirstname(){
+        document.getElementById("firstName").innerText="Madhugani";
+    }
+
+    function setlastname(){
+        document.getElementById("lastName").innerText="Sravani";
+    }
+
+    function setfullname(){
+        document.getElementById("fullName").innerText="Madhugani Sravani";
+    }
+
+    function clearDefault(){
+    document.getElementById("firstName").innerText="Hello";
+    document.getElementById("lastName").innerText="FLM";
+    document.getElementById("fullName").innerText="Vegita";
+
+    }
+    
+</script>
+</html>
