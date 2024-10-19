@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <input type="number" id="number1" placeholder="enter 1st Number" value="" />
+    <input type="number" id="number2" placeholder="enter 2nd Number" value=""/>
+    <hr />
+    <button onclick="doAdd()">Add</button>
+    <button onclick="doSubtract()">Subtract</button>
+    <button onclick="doMultiply()">Multiply</button>
+    <button onclick="doDivide()" >Divide</button>
+    <h1 id="out">output</h1>
+
+    
+</body>
+</html>
+
+<Script>
+    function doAdd()
+    {
+        const a = parseInt(document.getElementById("number1").value);
+        const b = parseInt(document.getElementById("number2").value);
+
+        document.getElementById("out").innerText = a + b;
+    }
+
+    function doSubtract()
+    {
+        const a = parseInt(document.getElementById("number1").value);
+        const b = parseInt(document.getElementById("number2").value);
+
+        document.getElementById("out").innerText = a - b;
+    }
+
+    function doMultiply()
+    {
+        const a = parseInt(document.getElementById("number1").value);
+        const b = parseInt(document.getElementById("number2").value);
+
+        document.getElementById("out").innerText = a * b;
+    }
+
+    function doDivide()
+    {
+        const a = parseInt(document.getElementById("number1").value);
+        const b = parseInt(document.getElementById("number2").value);
+
+        document.getElementById("out").innerText = a / b;
+    }
+
+
+        
+    
+</Script>
