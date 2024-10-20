@@ -41,14 +41,23 @@
 
   // Loop through each <p> element and add the event listener
   for (let i = 0; i < paragraphs.length; i++) {
-    paragraphs[i].addEventListener("mouseenter", changeBg);
+    paragraphs[i].addEventListener("mouseenter", changeBg3);
   }
 
-
-       
-       function changeBg(){
+  
+        
+       function changeBg3(){
        document.querySelector("p").style.backgroundColor="teal";
        document.querySelector("p").style.fontSize="70px";
+        }
+
+  for (let i = 0; i < paragraphs.length; i++) {
+    paragraphs[i].addEventListener("mouseleave", changeBg4);
+  }
+
+       function changeBg4(){
+       document.querySelector("p").style.backgroundColor="white";
+       document.querySelector("p").style.fontSize="50px";
         }
     
 
