@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        div{
+            background-color: palevioletred;
+            height: 400px;
+            width: 400px;
+            margin:  50px;
+        }
+    </style>
+</head>
+<body>
+    <div></div>
+    <p>this is p tag</p>
+    
+</body>
+</html>
+<script>
+   
+    let btn=document.querySelector("div");
+
+     btn.addEventListener('mouseenter',changeBg1);
+     function changeBg1(){
+          btn.style.backgroundColor = "yellow"; // Use 'this' to refer to the current div
+          btn.style.cursor = "pointer"; // Change cursor to pointer
+          console.log('mouseenter')
+       }
+
+     btn.addEventListener('mouseleave',changeBg2);
+       function changeBg2(){
+          btn.style.backgroundColor = "palevioletred";
+          console.log('mouseleave')
+       }
+
+        
+       let paragraphs = document.getElementsByTagName("p");
+
+  // Loop through each <p> element and add the event listener
+  for (let i = 0; i < paragraphs.length; i++) {
+    paragraphs[i].addEventListener("mouseenter", changeBg);
+  }
+
+
+       
+       function changeBg(){
+       document.querySelector("p").style.backgroundColor="teal";
+       document.querySelector("p").style.fontSize="70px";
+        }
+    
+
+        
+
+
+
+
+
+
+
+</script>
