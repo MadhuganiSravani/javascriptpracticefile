@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" initial-scale="1.0">
+    <title>Document</title>
+</head>
+<body>
+    <input type="number" id="number1" value= "" >
+    <input type="number" id="number2" value= "" >
+     
+
+    <button onclick="showAddition()">Addition</button>
+    <button onclick="shwSubtraction()">Subtraction</button>
+    <button onclick="ShowMultiplication()">Multiplication</button>
+    <button onclick="showDivision()">Division</button>
+
+    <h1 id="output">Output</h1>
+
+   
+
+    
+    </html>
+
+<script>
+    
+        
+       
+        
+    function showAddition(){
+         const a = parseFloat(document.getElementById("number1").value);
+        const b = parseFloat(document.getElementById("number2").value);
+
+         document.getElementById("out").innerText = a + b;
+
+         
+     }
+
+     function showSubtraction(){
+        let c=document.getElementById("number1").value;
+        let d=document.getElementById("number2").value;
+        document.getElementById("output").innerText="c - d";
+     }
+ 
+        
+        
+
+    function ShowMultiplication(){
+         let c=document.getElementById("number1").value;
+         let d=document.getElementById("number2").value;
+         document.getElementById("output").innerText="c * d";
+    }
+        
+        
+
+    function showDivision(){
+         let c=document.getElementById("number1").value;
+         let d=document.getElementById("number2").value;
+        document.getElementById("output").innerText="c / d";
+    }
+ 
+        
+        
+
+    
+     
+    
+
+</script>
