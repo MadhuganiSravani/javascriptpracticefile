@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h2>What Can JavaScript Do?</h2>
+
+    <p>JavaScript can change HTML attribute values.</p>
+
+
+
+
+<img src="https://i.pinimg.com/736x/96/4f/3d/964f3d4753a082749d25e785bc055a53.jpg" id="bulb" width="200px" height="200px" />
+
+<button onclick="display1()">On</button>
+<button onclick="display2()">Off</button>
+
+
+</body>
+</html>
+
+<script>
+    function display1(){
+        document.getElementById("bulb").src="https://i.pinimg.com/474x/8b/e0/60/8be0603fa9222908eac38746f7c72c2a.jpg";
+    }
+
+    function display2(){
+        document.getElementById("bulb").src="https://i.pinimg.com/736x/96/4f/3d/964f3d4753a082749d25e785bc055a53.jpg"
+    }
+</script>
