@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+</body>
+</html>
+<script>
+
+
+     async function f(){
+    //     //return 1; //by default resolve
+    //     return Promise.reject("error message"); //if we intent to reject
+              let promise=new Promise((resolve,reject)=>{ //manually created
+                setTimeout(()=>resolve("done"),1000);
+              })
+
+              let result=await promise;
+        
+          alert(result);
+    }
+        
+
+
+    f()
+     .then((result)=>alert(result))  //previous one result ie resolve 1/ reject 1
+     .catch((err)=>alert(err));
+
+    // //fetch()
+    
+
+</script>

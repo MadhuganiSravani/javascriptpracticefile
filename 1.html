@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+     
+    
+</body>
+</html>
+
+<script>
+     let newPromise=new Promise(function(resolve,reject){
+             setTimeout(()=>resolve(1),1000);
+     });
+
+     newPromise.then((result)=>{    //here result=1    //this return statement in .then() method creates another new promise.
+    alert(result);
+    return result*2;  //This return in promise method  triggers another new promise, which by default stored in resolve.
+    //1*2
+      })    
+      
+      .then(function(result){ //this .then() is to handle previous resolve  result=1*2;
+        alert(result);
+        return new Promise((resolve,reject)=>{
+            reject("this is error")
+        });   // this return triggers another new promise.
+    })
+        .then(function(result){ // result=2*2=4
+        alert(result);  
+         })
+
+    .catch((error)=>{
+        alert(error);
+    })  // to handle break error in multiple nested promises.
+</script>
