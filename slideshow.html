@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        #container >img{
+            height: 500px;
+            width: 1135px;
+        }
+    </style>
+</head>
+<body>
+    <button onclick="start()">start</button>
+    <button onclick="stop()">stop</button>
+
+    <div id="container"></div>
+</body>
+</html>
+
+<script>
+
+    var  images=[
+     
+        "https://cdn.pixabay.com/photo/2019/05/29/14/30/cinue-terre-4237666_1280.jpg",
+        "https://i.pinimg.com/474x/cf/5d/70/cf5d706f53c98449fa5e871cb2259215.jpg" ,
+        "https://i.pinimg.com/474x/e8/3a/b7/e83ab7d1b345d5eda44f9d5deae72987.jpg"
+];
+ let id;
+ function start(){
+    id=setInterval(function(){
+        let slideImage=document.createElement('img');
+
+        let i=0;
+        id=setInterval(function(){
+            slideImage.src=images[i++];
+            document.querySelector("#container").append(slideImage)
+        })
+    },2000)
+ }
+
+
+    
+   
+</script>
